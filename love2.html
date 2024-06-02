@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            
+        }
+        .letter {
+            width: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            /* Add animation */
+            animation: fade 3s 1 linear;
+            position: relative;
+            left: -100%;
+            opacity: 0;
+            transform-style: preserve-3d;
+            /* Ensure visibility */
+            opacity: 1 ;
+            visibility: visible ;
+            display: block ;
+            color: black !important;
+        }
+        
+        .letter h1 {
+            color: #F57C00;
+        }
+        .letter h3{
+            color: pink;
+        }
+        .letter p {
+            line-height: 1.6;
+        }
+        /* Define animation */
+        @keyframes fade {
+            0% {transform: scale(1); left: -100%; }
+            50% {transform: scale(1); left: -50%; }
+            100% {transform: scale(1); left: 0%; }
+        }
+        .letter {
+            left: 0%;
+            background-color: aqua;
+        }
+        /* Style for the video */
+        .love-video {
+            width: 100%;
+            height: auto;
+        }
+        /* Style for the audio */
+        .love-song {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <h1>Dear Vaishnavi,</h1>
+        <h3>My Love,</h3>
+        <p>
+            I hope this letter finds you in the best of health and spirits. I wanted to take a moment to express my feelings for you. You are the most beautiful person I have ever met. Your smile lights up my world and your presence makes everything better.
+        </p>
+        <p>
+            You are a special person, Vaishnavi, and I am grateful for every moment we spend together. I look forward to making many more memories with you.
+        </p>
+        <p style="color: rgb(115, 0, 255); font-size: medium;">dekh muje nhi pata me tujse kitna pyr karta hu lekin ha itna kh sakta hu ki tu meri jindagi me jabse aai h na to udass se jada khush rhta hu <br>Tuje pata h ki me uss din bass ye sochkar roya tha ki 1 saal baad tu muje chod gai to mera kya hoga . muje pta h tuje bolatha ki anything never be permant But u my love i feel many thing for u . bass apn ki duri thodi jada lambhi ho gai to mil nhi pae varna abhi tak to. me dkha bhi chuka hota ki me tuje kitna chahta hu . bass ese hi banaya ye letter . I hope u like it </p>
+        <p style="color: red; font-size: medium;">
+            With all my love,
+            <br>
+            Mohit ur loving bf
+        </p>
+        <p style="color: rgb(255, 0, 242); font-size: large;">I AM ALWAYS WITH U IN ANY SITUATION </p>
+        <!-- Add a video -->
+        <video class="love-video" controls>
+            <source src="C:\Users\abc\Downloads\Tum Se - Teri Baaton Mein Aisa Uljha Jiya-(Song4k).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add an audio player -->
+        <audio class="love-song" controls>
+            <source src="https://www.jiosaavn.com/song/ve-haaniyaan/XQICVhgJZAc" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+</body>
+</html>
