@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind-Blowing Three.js Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #canvas-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .title {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            animation: fadeInTitle 2s ease-out 1s forwards;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            text-align: right;
+            opacity: 0;
+            animation: fadeInControls 2s ease-out 2s forwards;
+        }
+
+        .control-item {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            z-index: 200;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInTitle {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInControls {
+            to { opacity: 1; }
+        }
+
+        canvas {
+            display: block;
+            cursor: grab;
+        }
+
+        canvas:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <div>Loading Amazing Experience...</div>
+        </div>
+        
+        <div class="ui-overlay">
+            <div class="title">🚀 MIND-BLOWING 3D UNIVERSE</div>
+            <div class="controls">
+                <div class="control-item">🖱️ Mouse: Rotate Camera</div>
+                <div class="control-item">⚡ Click: Explode Particles</div>
+                <div class="control-item">🌟 Scroll: Zoom In/Out</div>
+                <div class="control-item">✨ Space: Color Burst</div>
+                <div class="control-item">🌀 R: Reality Rip</div>
+                <div class="control-item">⏰ T: Time Wave</div>
+                <div class="control-item">💥 S: Supernova</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
